@@ -1,0 +1,81 @@
+{
+  "snapshot": "18-20 October 2026",
+  "scope": "fixed-scene reaching plus reference-assisted grasp and scripted lift probe",
+  "runtime_tactile_feedback": false,
+  "reaching_training_steps": 65536,
+  "reaching_terminal_distance_mm": 1.4732881017208177,
+  "reaching_hold_s": 0.3000000000000002,
+  "reaching_repeated_fixed_state_checks": {
+    "successes": 100,
+    "episodes": 100,
+    "independent_positions": false
+  },
+  "grasp_training_steps": 24576,
+  "initialized_reference_ppo": {
+    "episodes": 10,
+    "successes": 10,
+    "mean_lift_mm": 23.008875342046487
+  },
+  "trained_reference_ppo": {
+    "episodes": 100,
+    "successes": 100,
+    "mean_lift_mm": 23.04977878248473
+  },
+  "zero_residual_reference_precheck": {
+    "episodes": 1,
+    "success": true,
+    "peak_lift_mm": 23.309106756382093
+  },
+  "learning_benefit_established": false,
+  "full_50mm_2s_learned_task_completed": false,
+  "continuous_sequence_sim_seconds": 7.387999999999408,
+  "handoff_preserves_state_and_time": true,
+  "offset_probes": [
+    {
+      "offset_mm": [
+        5.0,
+        0.0
+      ],
+      "approach_error_mm": 1.7682240990025886,
+      "approach_success": true,
+      "grasp_attempted": true,
+      "sequence_success": true
+    },
+    {
+      "offset_mm": [
+        -5.0,
+        0.0
+      ],
+      "approach_error_mm": 1.6767417342763389,
+      "approach_success": true,
+      "grasp_attempted": true,
+      "sequence_success": true
+    },
+    {
+      "offset_mm": [
+        0.0,
+        5.0
+      ],
+      "approach_error_mm": 3.4251581853075526,
+      "approach_success": false,
+      "grasp_attempted": false,
+      "sequence_success": false
+    },
+    {
+      "offset_mm": [
+        0.0,
+        -5.0
+      ],
+      "approach_error_mm": 1.2761866367011965,
+      "approach_success": true,
+      "grasp_attempted": true,
+      "sequence_success": true
+    }
+  ],
+  "limitations": [
+    "same physical initial state in repeated fixed-scene checks",
+    "reference already supplies successful grasp behavior",
+    "fixed lift probe is scripted",
+    "four deterministic offset probes are not a general success-rate estimate"
+  ]
+}

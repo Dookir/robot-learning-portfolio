@@ -1,0 +1,43 @@
+{
+  "scope": "offline kinematic experiments, not dynamics or RL task success",
+  "snapshot": "10-17 October 2026",
+  "screwdriver_baseline": {
+    "frames": 271,
+    "stable_contact_label_frames": 6,
+    "robot_human_keypoint_mean_mm": 12.26,
+    "constrained_frame_contact_mean_mm": 5.35,
+    "sampled_object_penetration_mm": 10.58,
+    "physical_task_validated": false
+  },
+  "bottle_retry_frames": 155,
+  "same_start_retry_steps_each": 300,
+  "contact_acceptance_threshold_mm": 8,
+  "sampled_penetration_acceptance_threshold_mm": 5,
+  "same_start_retries": [
+    {
+      "learning_rate": 0.02,
+      "sampled_object_penetration_mm": 13.756850242614746,
+      "contact_mean_mm": 11.425605773925781,
+      "second_difference_rms_deg": 0.9295878922650892,
+      "quality_accepted": false
+    },
+    {
+      "learning_rate": 0.002,
+      "sampled_object_penetration_mm": 3.7559449672698975,
+      "contact_mean_mm": 10.357653617858887,
+      "second_difference_rms_deg": 0.3894118696666113,
+      "limited_mesh_probe_max_penetration_mm": 3.8822524639726588,
+      "quality_accepted": false
+    }
+  ],
+  "origin_pose_interface": {
+    "selected_frames": 119,
+    "global_pose_qc_invalid_frames": 89,
+    "accepted_for_training": false
+  },
+  "limitations": [
+    "sampled geometry is not exhaustive collision checking",
+    "contact-free frames are not zero-error contact examples",
+    "second differences are frame-domain motion proxies, not physical acceleration"
+  ]
+}

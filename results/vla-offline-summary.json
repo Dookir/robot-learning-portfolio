@@ -1,0 +1,18 @@
+{
+  "scope": "offline recorded-action comparison; no physical robot evaluation",
+  "snapshot": "September 2026",
+  "episodes": 50,
+  "frames": 8438,
+  "videos": 150,
+  "train_episodes": 40,
+  "validation_episodes": 10,
+  "formal_training_steps": 30000,
+  "final_training_loss": 0.0069022556,
+  "train_weighted_frame_action_mae": 0.015256,
+  "validation_weighted_frame_action_mae": 0.017701,
+  "predictions_finite": true,
+  "physical_closed_loop_evaluated": false,
+  "checkpoint_selection": "latest training checkpoint, not validation-selected",
+  "split": "ordered episode split, training 0-39 and validation 40-49",
+  "mae_interpretation": "recorded-action agreement in the evaluation representation, not a physical-unit distance or success rate"
+}
